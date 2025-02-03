@@ -17,7 +17,7 @@
 * Close Poweshell.
 
 ### Usage:
-* Complete with your information at line `2`, `3`, and `23` in the `main.ps1` file.
+* Complete with your information at line `3`, `4`, and `23` in the `main.ps1` file.
 * Upload to `https://www.dropbox.com` the file just modified.
 * Copy the link of the `main.ps1` and paste it at line `19` in PAYLOAD.txt.
 * Encode the PAYLOAD.txt at `https://payloadstudio.com/community/`.
